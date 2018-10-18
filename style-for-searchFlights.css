@@ -1,0 +1,29 @@
+body {
+    background-color: #EB9486;
+}
+
+#fromCity{
+    background-color: lightgray;
+}
+
+ #toCity{
+     background-color: lightgray;
+ }
+
+  #selectFromAirport{
+      background-color: lightgray;
+  }
+
+ #selectToAirport{
+      background-color: lightgray;
+ }
+
+
+  #selectNoAdults{
+      background-color: lightgray;
+  }
+
+
+#selectTravelClass{
+      background-color: lightgray;
+  }

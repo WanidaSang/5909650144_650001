@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style type=""></style>
+  <style type="text/css">
+      @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
+  </style>
+      <!-- necessary scripts for the dialog -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <script src="js/Flight.js"></script>
+  <link href="style-for-searchFlights.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+
+  <form class="ng-pristine ng-valid ng-scope" onsubmit="return validateFrom()" action="displayFight.html" method="POST" ng-controller="searchCtrl" ng-app="flightModule">
+
+    <div class="container">
+	     <div class="jumbotron text-center">
+		       <h1>FLIGHT</h1>
+	     </div>
+
+	      <div align="right">
+		        <h2>
+              <input name="directionOptRadio" id="directionOptRadio" type="radio" value="OneWay"> One Way
+            </h2>
+		        <h2>
+              <input name="directionOptRadio" id="directionOptRadio" type="radio" checked="" value="RoundTrip"> Round Trip
+            </h2>
+	      </div>
+
+      	<div class="row">
+        	<div class="col-md-6">
+	          <div class="form-group">
+              <label for="fromCity">Flying from</label>
+		          <input name="fromCity" class="form-control" id="fromCity" onblur="Editor(1)" type="text" placeholder="From City">
+        </div>
+      </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="fromCity">Flying to</label>
+		          <input name="toCity" class="form-control" id="toCity" onblur="Editor(2)" type="text" placeholder="To City">
+            </div>
+	         </div>
+	      </div>
+
+
+	    <div>
+		    <div class="row">
+          <div class="col-md-6">
+            <label for="fromCity">Departing</label>
+      		<select name="selectFromName" id="selectFromAirport">
+            <option id="su1" value="suvarnabhumi" selected="">Suvarnabhumi</option>
+            <option id="cdg1" value="cdg">CDG</option>
+			      <option id="don1" value="donmueng">Donmueng</option>
+		      </select>
+        </div>
+
+		     <div class="col-md-6">
+           <label for="fromCity">Returning</label>
+	         <select name="selectTo" id="selectToAirport">
+             <option id="su2" value="suvarnabhumi" selected="">Suvarnabhumi</option>
+             <option id="cdg2" value="cdg">CDG</option>
+			       <option id="don2" value="donmueng">Donmueng</option>
+		       </select>
+         </div>
+       </div>
+
+       <div class="row">
+          <div class="col-md-6">
+            <label for="fromCity">Adult</label>
+		        <select name="selectNo" id="selectNoAdults">
+              <option value="1" selected="">1</option>
+              <option value="2">2</option>
+		        </select>
+          </div>
+
+		      <div class="col-md-6">
+            <label for="fromCity">Cabin</label>
+		          <select name="selectTravel" id="selectTravelClass">
+                <option value="BClass" selected="">BUSINESS_CLASS</option>
+                <option value="NClass">NORMAL_CLASS</option>
+		          </select>
+
+          </div>
+      </div>
+      <br>
+        <div align="center">
+        <button class="btn btn-primary btn-lg active " style="background-color: #7E7F9A ; border-color: #F3DE8A" type="submit" ng-click="displayFight.html">Search</button>
+        <!--<input type = "submit" name = "searchFlightBtn" id= "searchFlightBtn" value = "Search" />-->
+        </div>
+         </div>
+       </div>
+     </form>
+   </body>
+   </html>
